@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const inputRef = useRef();
+
+  const handleSearch = () => {
+    props.setSearchTitle(inputRef.current.value);
+  };
+
   return (
     <div className="search-bar">
-      <input type="text" placeholder="Search for a movie..." />
-      <button>Search</button>
+      <input
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+          }
+        }}
+        ref={inputRef}
+        type="text"
+        placeholder="Search for a movie..."
+      />
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };

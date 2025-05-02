@@ -11,6 +11,19 @@
   overflow: hidden;
   text-align: left;
 }
+.movie-heart {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+.movie-heart svg {
+  width: 20px;
+  height: 20px;
+}
+
+.red-heart svg {
+  fill: red;
+}
 
 .movie-item img {
   width: 100%;
@@ -21,6 +34,7 @@
 
 .movie-info {
   padding: 10px;
+  position: relative;
 }
 
 .movie-info h3 {
