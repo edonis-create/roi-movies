@@ -5,7 +5,7 @@ const MovieList = ({ movies }) => {
   return (
     <div className="movie-list">
       {movies.length === 0 ? (
-        <p>No movies found. Please search for a movie.</p>
+        <p>Loading...</p>
       ) : (
         movies.map((movie) => (
           <div key={movie.imdbID} className="movie-item">
